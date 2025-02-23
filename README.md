@@ -68,4 +68,5 @@
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=exttreme0001&show_icons=true&locale=en&layout=compact" alt="exttreme0001" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=exttreme0001&show_icons=true&locale=en" alt="exttreme0001" /></p>
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=exttreme0001&show_icons=true&theme=dark)
+![Metrics](https://metrics.lecoq.io/exttreme0001)
+![Metrics](https://metrics.lecoq.io/exttreme0001?template=classic&isocalendar=1&languages=1&stars=1&lines=1)
