@@ -1,19 +1,36 @@
-name: Generate Metrics
+name: Update Language Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Обновлять раз в день
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 jobs:
-  metrics:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Metrics
-        uses: lowlighter/metrics@latest
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          token: ${{ secrets.GH_STATS_TOKEN }}
-          base: repositories
-          repositories: 200  # Учитывать до 200 репозиториев
-          repositories_affiliations: owner, collaborator, organization_member
-          config_timezone: Europe/Moscow
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        env:
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: python update_languages.py
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add README.md
+          git commit -m "Update README with latest language stats" || echo "No changes to commit"
+          git push https://exttreme0001:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/exttreme0001/exttreme0001.git
