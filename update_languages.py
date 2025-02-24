@@ -24,6 +24,7 @@ def get_language_stats(repos):
             lang_url = repo["languages_url"]
             lang_data = requests.get(lang_url, headers=HEADERS).json()
             if lang_data:
+                print(f"Languages for {repo['name']}: {lang_data}")  # Лог для отладки
                 for lang, bytes in lang_data.items():
                     lang_stats[lang] = lang_stats.get(lang, 0) + bytes
     return lang_stats
@@ -36,6 +37,10 @@ def generate_language_chart(lang_stats):
 
     sorted_langs = sorted(lang_stats.items(), key=lambda x: x[1], reverse=True)
     print(f"Sorted Languages: {sorted_langs}")  # Выводим отсортированный список для отладки
+    if not sorted_langs:
+        print("Нет популярных языков для отображения.")
+        return
+
     langs, sizes = zip(*sorted_langs[:10])  # Берем 10 самых популярных языков
 
     plt.figure(figsize=(10, 6))
@@ -45,8 +50,11 @@ def generate_language_chart(lang_stats):
     plt.title(f"Топ 10 языков для пользователя {USERNAME}")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
+
+    # Сохраняем график как изображение
     plt.savefig("language_chart.png")
     plt.close()
+    print("График успешно сгенерирован и сохранен как 'language_chart.png'.")
 
 # Основная логика
 def main():
