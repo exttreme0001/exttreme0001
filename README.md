@@ -18,7 +18,7 @@
   </a>
 </p>
 
-<h2 align="left">📚 Пройденные курсы:</h2>
+<h2 align="left">📚 Finished Courses:</h2>
 
 <ul>
   <li>
