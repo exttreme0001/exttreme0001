@@ -53,6 +53,11 @@ def main():
     repos = get_repositories()
     lang_stats = get_language_stats(repos)
 
+    # Выводим статистику по языкам в лог
+    print("Language statistics:")
+    for lang, size in lang_stats.items():
+        print(f"{lang}: {size / 1024:.2f} KB")
+
     # Генерируем URL для картинки
     image_url = generate_image_url()
 
