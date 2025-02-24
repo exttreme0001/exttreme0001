@@ -35,7 +35,7 @@
   </li>
   <li>
     <strong>Advanced Go Developer Course</strong> —
-    <a href="https://practicum.yandex.ru/go-advanced/" target="_blank">Яндекс Практикум</a>
+    <a href="https://practicum.yandex.ru/go-advanced/" target="_blank">Yandex Practicum</a>
   </li>
 </ul>
 
