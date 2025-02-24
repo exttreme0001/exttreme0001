@@ -56,6 +56,9 @@ def main():
     # Генерируем URL для картинки
     image_url = generate_image_url()
 
+    # Выводим URL картинки в лог
+    print(f"Generated Image URL: {image_url}")
+
     # Генерируем Markdown код для вставки картинки в README
     readme_image_code = generate_markdown_image(image_url)
 
