@@ -67,16 +67,6 @@
 
 
 <!-- LANGUAGES_START -->
-- C++: 974.98 KB
-- Python: 53.97 KB
-- Java: 33.62 KB
-- Go: 32.22 KB
-- Kotlin: 29.09 KB
-- HTML: 2.48 KB
-- CMake: 1.79 KB
-- Dockerfile: 1.35 KB
-- Shell: 0.45 KB
-- C: 0.07 KB
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=exttreme0001&show_icons=true&locale=en&layout=compact" alt="exttreme0001" /></p>
 <!-- LANGUAGES_END -->
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=exttreme0001&show_icons=true&locale=en" alt="exttreme0001" /></p>
