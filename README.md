@@ -65,7 +65,9 @@
   </a> 
 </p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=exttreme0001&show_icons=true&locale=en&layout=compact" alt="exttreme0001" /></p>
 
+<!-- LANGUAGES_START -->
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=exttreme0001&show_icons=true&locale=en&layout=compact" alt="exttreme0001" /></p>
+<!-- LANGUAGES_END -->
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=exttreme0001&show_icons=true&locale=en" alt="exttreme0001" /></p>
-![](metrics.svg)
+
