@@ -18,6 +18,27 @@
   </a>
 </p>
 
+<h2 align="left">📚 Пройденные курсы:</h2>
+
+<ul>
+  <li>
+    <strong>An interactive GIT visualization and tutorial</strong> —
+    <a href="https://github.com/pcottle/learnGitBranching" target="_blank">LearnGitBranching</a>
+  </li>
+  <li>
+    <strong>Advanced Golang</strong> —
+    <a href="https://purpleschool.ru/course/go-advanced" target="_blank">Purple School</a>
+  </li>
+  <li>
+    <strong>Development of Web Applications on Go</strong> —
+    <a href="https://www.udemy.com/course/golang-ninja/?ysclid=m7jc8ft8p1566106084&couponCode=ST4MT240225A" target="_blank">Udemy</a>
+  </li>
+  <li>
+    <strong>Advanced Go Developer Course</strong> —
+    <a href="https://practicum.yandex.ru/go-advanced/" target="_blank">Яндекс Практикум</a>
+  </li>
+</ul>
+
 ---
 <h3 align="left">Languages:</h3>
 <p align="left">
