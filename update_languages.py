@@ -1,5 +1,6 @@
 import requests
 import os
+import matplotlib.pyplot as plt
 
 # Получаем токен
 GH_STATS_TOKEN = os.getenv("GH_STATS_TOKEN")
@@ -23,29 +24,22 @@ def get_language_stats(repos):
                 lang_stats[lang] = lang_stats.get(lang, 0) + bytes
     return lang_stats
 
-# Генерируем URL для генерации картинки с актуальной статистикой
-def generate_image_url():
-    image_url = f"https://github-readme-stats.vercel.app/api/top-langs?username={USERNAME}&show_icons=true&locale=en&layout=compact&count_private=true&token={GH_STATS_TOKEN}"
-    return image_url
+# Генерация графика с использованием Matplotlib
+def generate_language_chart(lang_stats):
+    # Сортируем по убыванию
+    sorted_langs = sorted(lang_stats.items(), key=lambda x: x[1], reverse=True)
+    langs, sizes = zip(*sorted_langs[:10])  # Берем 10 самых популярных языков
 
-# Генерация Markdown кода для вставки в README.md
-def generate_markdown_image(image_url):
-    return f'<p><img align="left" src="{image_url}" alt="{USERNAME}" /></p>'
+    # Создаем график
+    plt.figure(figsize=(10, 6))
+    plt.barh(langs, sizes, color='skyblue')
+    plt.xlabel('Bytes')
+    plt.title('Top 10 Languages by Bytes in Repositories')
 
-# Функция для обновления README.md
-def update_readme(file_path, new_content):
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # Заменяем данные между маркерами
-    start_marker = "<!-- LANGUAGES_START -->"
-    end_marker = "<!-- LANGUAGES_END -->"
-    new_content_block = f"{start_marker}\n{new_content}\n{end_marker}"
-
-    updated_content = content.replace(f"{start_marker}\n(данные будут обновляться автоматически)\n{end_marker}", new_content_block)
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(updated_content)
+    # Сохраняем изображение
+    plt.tight_layout()
+    plt.savefig("language_stats.png")
+    plt.close()
 
 # Основная логика
 def main():
@@ -53,23 +47,10 @@ def main():
     repos = get_repositories()
     lang_stats = get_language_stats(repos)
 
-    # Выводим статистику по языкам в лог
-    print("Language statistics:")
-    for lang, size in lang_stats.items():
-        print(f"{lang}: {size / 1024:.2f} KB")
+    # Генерируем график и сохраняем его как картинку
+    generate_language_chart(lang_stats)
 
-    # Генерируем URL для картинки
-    image_url = generate_image_url()
-
-    # Выводим URL картинки в лог
-    print(f"Generated Image URL: {image_url}")
-
-    # Генерируем Markdown код для вставки картинки в README
-    readme_image_code = generate_markdown_image(image_url)
-
-    # Обновляем README.md
-    update_readme("README.md", readme_image_code)
-    print("README.md успешно обновлен!")
+    print("language_stats.png успешно обновлен!")
 
 if __name__ == "__main__":
     main()
