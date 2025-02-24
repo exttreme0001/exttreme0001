@@ -67,7 +67,7 @@
 
 
 <!-- LANGUAGES_START -->
-
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=exttreme0001&show_icons=true&locale=en&layout=compact&count_private=true&token=***" alt="exttreme0001" /></p>
 <!-- LANGUAGES_END -->
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=exttreme0001&show_icons=true&locale=en" alt="exttreme0001" /></p>
 
