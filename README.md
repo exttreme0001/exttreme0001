@@ -1,7 +1,7 @@
 ## <h1 align="center">Hi 👋, I'm Egor</h1>
 
 ### 🌟 Current Work:
-- I’m currently working on [CustS](https://github.com/CustSh/CustS1)
+- I’m currently working on [ShopOnGO](https://github.com/ShopOnGO/ShopOnGO)
 
 ### 🌱 Learning:
 - I’m currently learning **Go, Algorithms, Databases**
