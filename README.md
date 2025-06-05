@@ -37,6 +37,8 @@
     <strong>Advanced Go Developer Course</strong> —
     <a href="https://practicum.yandex.ru/go-advanced/" target="_blank">Yandex Practicum</a>
   </li>
+  <li>[Oleg Kozyrev] The entire base of Golang interviews (2024) —
+  </li>
 </ul>
 
 ---
